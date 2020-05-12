@@ -2,19 +2,18 @@ backend:
   name: github
   repo: isubasinghe/sub-blog
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: "src/pages/blog"
     create: true
     fields:
       - { name: path, label: Path }
       - { name: header, label: Title }
       - { name: lead, label: "Lead paragraph" }
       - { name: date, label: Date, widget: datetime }
-      - { name: image, label: Image, widget: "image" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
       - { name: body, label: Body, widget: markdown }
-
