@@ -1,5 +1,5 @@
-const _ = require("lodash");
 const path = require("path");
+const slug = require("slugify");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
@@ -15,4 +15,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return graphql(`
+    query fetchAllPostsMeta {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            header
+            path
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      throw result.errors;
+    }
+    const component = path.resolve("src/templates/post.js");
+
+    result.data.allMarkdownRemark.nodes.forEach((node) => {
+      createPage({
+        path: node.frontmatter.path || slug(node.frontmatter.header),
+        component,
+      });
+    });
+  });
 };
