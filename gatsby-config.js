@@ -59,12 +59,7 @@ module.exports = {
         ],
       },
     },
-    {
-      reolve: "gatsby-plugin-styled-components",
-      options: {
-        pure: true,
-      },
-    },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify-cms",
 
     // {
