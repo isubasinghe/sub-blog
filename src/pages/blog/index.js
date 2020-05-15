@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 const Blog = ({ data }) => {
+  const nodes = data?.allMardownRemark?.nodes;
   return <></>;
 };
 
