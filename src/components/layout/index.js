@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import ComponentContext from "../../context/component";
 import Nav from "../nav";
 
 const Main = styled.main`
@@ -8,7 +7,6 @@ const Main = styled.main`
 `;
 
 const Layout = ({ children }) => {
-  const componentContext = useContext(ComponentContext);
   return (
     <>
       <Nav />

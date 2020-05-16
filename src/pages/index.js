@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Layout from "../components/layout";
 import { pages } from "../helpers/pagedata";
