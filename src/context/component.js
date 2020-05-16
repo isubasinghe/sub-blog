@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const componentContext = createContext();
+const componentContext = createContext({ activeClass: "" });
 
 export default componentContext;

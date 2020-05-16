@@ -4,6 +4,7 @@ const theme = {
   white: "#F0F0F0",
   black: "#171717",
   accent: "#61FFEA",
+  fill: "#6EC5FF",
 };
 
 export default theme;

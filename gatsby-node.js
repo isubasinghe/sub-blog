@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
     query fetchAllPostsMeta {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             header
@@ -35,7 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
     const component = path.resolve("src/templates/post.js");
-
     result.data.allMarkdownRemark.nodes.forEach((node) => {
       createPage({
         path: node.frontmatter.path || slug(node.frontmatter.header),

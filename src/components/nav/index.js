@@ -1,13 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import {
-  faHome,
-  faLaptopCode,
-  faBlog,
-  faBriefcase,
-  faAddressCard,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ComponentContext from "../../context/component";
+import { pages } from "../../helpers/pagedata";
 import theme from "../../theme";
 
 const StyledNav = styled.nav`
@@ -40,29 +35,27 @@ const Icon = styled(FontAwesomeIcon)`
   width: 100% !important;
   height: auto !important;
   path {
-    fill: ${theme.primary};
+    fill: ${(props) => props.fill};
   }
 `;
 
 const Nav = () => {
+  const componentContext = useContext(ComponentContext);
+
   return (
     <StyledNav>
       <StyledUL>
-        <StyledItem>
-          <Icon icon={faHome} />
-        </StyledItem>
-        <StyledItem>
-          <Icon icon={faLaptopCode} />
-        </StyledItem>
-        <StyledItem>
-          <Icon icon={faBlog} />
-        </StyledItem>
-        <StyledItem>
-          <Icon icon={faBriefcase} />
-        </StyledItem>
-        <StyledItem>
-          <Icon icon={faAddressCard} />
-        </StyledItem>
+        {pages.map(({ icon, key, anchor }) => {
+          const active = key === componentContext.activeClass;
+          const fill = active ? theme.fill : theme.primary;
+          return (
+            <a href={anchor} key={key}>
+              <StyledItem>
+                <Icon fill={fill} icon={icon} />
+              </StyledItem>
+            </a>
+          );
+        })}
       </StyledUL>
     </StyledNav>
   );

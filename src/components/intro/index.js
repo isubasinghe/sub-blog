@@ -1,21 +1,15 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import theme from "../../theme";
 
-const IntroBGStyle = createGlobalStyle`
-  body {
-    background-color: ${theme.secondary};
-  }
+const IntroContainer = styled.div`
+  background-color: ${theme.secondary};
+  height: 100%;
+  width: 100%;
 `;
 
 const Intro = ({ active }) => {
-  console.log(active);
-  return (
-    <>
-      {active && <IntroBGStyle />}
-      <div>Hello</div>
-    </>
-  );
+  return <IntroContainer />;
 };
 
 export default Intro;
