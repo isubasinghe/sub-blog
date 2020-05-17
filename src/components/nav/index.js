@@ -37,6 +37,9 @@ const Icon = styled(FontAwesomeIcon)`
   path {
     fill: ${(props) => props.fill};
   }
+  &:hover {
+    opacity: 0.65;
+  }
 `;
 
 const Nav = () => {
