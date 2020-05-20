@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-javascript.js";
 import SimpleLayout from "../components/layout/simple-layout";
 import theme from "../theme";
 
@@ -34,7 +37,9 @@ const MetaContainer = styled.div`
 `;
 
 const Post = ({ data }) => {
-  console.log(data);
+  useLayoutEffect(() => {
+    Prism.highlightAll();
+  });
   const header = data?.markdownRemark?.frontmatter?.header ?? "";
   const lead = data?.markdownRemark?.frontmatter?.lead ?? "";
   const date = data?.markdownRemark?.frontmatter?.date ?? "";
