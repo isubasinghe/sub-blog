@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import PreviewBlogsQuery from "../../queries/preview-blogs";
 import theme from "../../theme";
 
@@ -21,11 +22,14 @@ const PostsContainer = styled.div`
 `;
 const Blog = () => {
   return (
-    <BlogContainer>
-      <PreviewBlogsQuery
-        render={(posts) => <PostsContainer></PostsContainer>}
-      />
-    </BlogContainer>
+    <>
+      {active && <Helmet title="Blog" />}
+      <BlogContainer>
+        <PreviewBlogsQuery
+          render={(posts) => <PostsContainer></PostsContainer>}
+        />
+      </BlogContainer>
+    </>
   );
 };
 export default Blog;

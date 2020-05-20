@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import theme from "../../theme";
 
 const AboutContainer = styled.div`
@@ -9,7 +10,12 @@ const AboutContainer = styled.div`
 `;
 
 const About = ({ active }) => {
-  return <AboutContainer />;
+  return (
+    <>
+      {active && <Helmet title="About me" />}
+      <AboutContainer />
+    </>
+  );
 };
 
 export default About;

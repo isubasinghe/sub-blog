@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import theme from "../../theme";
 
 const IntroContainer = styled.div`
@@ -9,7 +10,12 @@ const IntroContainer = styled.div`
 `;
 
 const Intro = ({ active }) => {
-  return <IntroContainer />;
+  return (
+    <>
+      {active && <Helmet title="Istha Subasinghe" />}
+      <IntroContainer />
+    </>
+  );
 };
 
 export default Intro;
