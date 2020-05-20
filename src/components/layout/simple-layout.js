@@ -2,10 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBackward,
-  faLongArrowAltLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 import theme from "../../theme";
 
 const Nav = styled.nav`
