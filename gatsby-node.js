@@ -23,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
     query fetchAllPostsMeta {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
+          id
           frontmatter {
             header
             path
@@ -39,6 +40,9 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: node.frontmatter.path || slug(node.frontmatter.header),
         component,
+        context: {
+          id: node?.id,
+        },
       });
     });
   });

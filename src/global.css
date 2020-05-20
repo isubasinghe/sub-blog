@@ -7,5 +7,10 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #6ec5ff;
+}
+
+.markdown__render * {
+  color: #c1bdb3;
+  max-width: 750px;
 }
