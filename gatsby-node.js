@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: node.frontmatter.path || slug(node.frontmatter.header),
         component,
         context: {
-          id: node?.id,
+          id: node.id,
         },
       });
     });
