@@ -20,7 +20,7 @@ const PostsContainer = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-const Blog = () => {
+const Blog = ({ active }) => {
   return (
     <>
       {active && <Helmet title="Blog" />}
