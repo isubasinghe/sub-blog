@@ -35,14 +35,14 @@ const BackIcon = styled(FontAwesomeIcon)`
   height: 2rem;
   width: 1.25rem !important;
   path {
-    fill: ${theme.fill};
+    fill: ${theme.blogText};
   }
 `;
 
 const P = styled.p`
   margin-left: 1rem;
   font-size: 1.25rem;
-  color: ${theme.fill};
+  color: ${theme.blogText};
 `;
 const SimpleLayout = ({ children }) => {
   return (
