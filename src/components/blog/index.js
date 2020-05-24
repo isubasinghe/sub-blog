@@ -46,7 +46,7 @@ const Blog = ({ active }) => {
             const items = isMobile ? mobileItems : desktopItems;
             return (
               <>
-                {window && (
+                {typeof window !== "undefined" && (
                   <>
                     <PostsContainer>
                       {items.map((post) => {
