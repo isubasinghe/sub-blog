@@ -5,7 +5,7 @@ const PreviewBlogsQuery = ({ render }) => {
   const blogData = useStaticQuery(graphql`
     query fetchLatestPosts {
       allMarkdownRemark(
-        limit: 10
+        limit: 9
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         nodes {
@@ -26,14 +26,18 @@ const PreviewBlogsQuery = ({ render }) => {
     }
   `);
 
-  const posts = (blogData?.allMarkdownRemark?.nodes ?? []).map((node) => {
+  let posts = (blogData?.allMarkdownRemark?.nodes ?? []).map((node) => {
     const postData = {};
     postData.gatsbyImage =
       node?.frontmatter?.featuredimage?.childImageSharp?.fluid ?? {};
     postData.header = node?.frontmatter?.header ?? "";
     postData.lead = node?.frontmatter?.lead;
+    postData.link = node?.frontmatter?.path ?? "";
     return postData;
   });
+  posts = posts.concat(posts);
+  posts = posts.concat(posts);
+  posts = posts.concat(posts);
 
   const child = render(posts);
   return <>{child}</>;

@@ -13,7 +13,7 @@ const About = ({ active }) => {
   return (
     <>
       {active && <Helmet title="About me" />}
-      <AboutContainer />
+      <AboutContainer></AboutContainer>
     </>
   );
 };

@@ -18,12 +18,6 @@ export const pages = [
   { component: About, icon: faLaptopCode, key: "about", anchor: "#about" },
   { component: Blog, icon: faBlog, key: "blog", anchor: "#blog" },
   {
-    component: Portfolio,
-    icon: faBriefcase,
-    key: "portfolio",
-    anchor: "#portfolio",
-  },
-  {
     component: Contact,
     icon: faAddressCard,
     key: "contact",

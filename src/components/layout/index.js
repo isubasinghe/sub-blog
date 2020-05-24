@@ -4,6 +4,7 @@ import Nav from "../nav";
 
 const Main = styled.main`
   margin-left: 4rem;
+  width: calc(100% - 4rem);
 `;
 
 const Layout = ({ children }) => {

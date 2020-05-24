@@ -1,3 +1,5 @@
+const theme = require("./src/theme");
+
 module.exports = {
   siteMetadata: {
     title: "Isitha Subasinghe",
@@ -6,6 +8,15 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: theme.accent,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",

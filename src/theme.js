@@ -8,4 +8,4 @@ const theme = {
   blogText: "#c1bdb3",
 };
 
-export default theme;
+module.exports = theme;
