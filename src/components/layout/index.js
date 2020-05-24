@@ -5,6 +5,7 @@ import Nav from "../nav";
 const Main = styled.main`
   margin-left: 4rem;
   width: calc(100% - 4rem);
+  background-color: "#232323";
 `;
 
 const Layout = ({ children }) => {
