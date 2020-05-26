@@ -44,12 +44,12 @@ const P = styled.p`
   font-size: 1.25rem;
   color: ${theme.blogText};
 `;
-const SimpleLayout = ({ children }) => {
+const SimpleLayout = ({ children, to = "/#blog" }) => {
   return (
     <>
       <BackgroundStyle />
       <Nav>
-        <BackContainer to="/#blog">
+        <BackContainer to={to}>
           <BackIcon icon={faLongArrowAltLeft} />
           <P>Back</P>
         </BackContainer>
