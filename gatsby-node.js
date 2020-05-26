@@ -1,3 +1,4 @@
+const paginate = require("gatsby-awesome-pagination").paginate;
 const path = require("path");
 const slug = require("slugify");
 const { createFilePath } = require("gatsby-source-filesystem");
@@ -44,6 +45,14 @@ exports.createPages = ({ graphql, actions }) => {
           id: node.id,
         },
       });
+    });
+    const posts = result.data.allMarkdownRemark.nodes || [];
+    paginate({
+      createPage,
+      items: posts,
+      itemsPerPage: 10,
+      pathPrefix: "/blog",
+      component: path.resolve("./src/templates/blog.js"),
     });
   });
 };

@@ -44,7 +44,7 @@ const P = styled.p`
   font-size: 1.25rem;
   color: ${theme.blogText};
 `;
-const SimpleLayout = ({ children, to = "/#blog" }) => {
+const SimpleLayout = ({ children, footer = null, to = "/#blog" }) => {
   return (
     <>
       <BackgroundStyle />
@@ -55,6 +55,7 @@ const SimpleLayout = ({ children, to = "/#blog" }) => {
         </BackContainer>
       </Nav>
       <main>{children}</main>
+      {footer}
     </>
   );
 };
