@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import { useMediaQuery } from "react-responsive";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import PreviewBlogsQuery from "../../queries/preview-blogs";
 import theme from "../../theme";
 import BlogPreview from "../blog-preview";
@@ -31,6 +33,26 @@ const H3 = styled.h3`
   color: ${theme.white};
   text-align: right;
   padding-right: 10px;
+`;
+
+const ReadMoreContainer = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-left: 2rem;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.65;
+  }
+`;
+const NextIcon = styled(FontAwesomeIcon)`
+  height: 2rem;
+  width: 1.25rem !important;
+  path {
+    fill: ${theme.blogText};
+  }
 `;
 
 const Blog = ({ active }) => {
@@ -63,9 +85,10 @@ const Blog = ({ active }) => {
                       })}
                     </PostsContainer>
 
-                    <Link to="/blog">
+                    <ReadMoreContainer to="/blog">
                       <H3>Read More</H3>
-                    </Link>
+                      <NextIcon icon={faLongArrowAltRight} />
+                    </ReadMoreContainer>
                   </>
                 )}
               </>

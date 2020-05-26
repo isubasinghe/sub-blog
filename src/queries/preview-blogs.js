@@ -35,9 +35,6 @@ const PreviewBlogsQuery = ({ render }) => {
     postData.link = node?.frontmatter?.path ?? "";
     return postData;
   });
-  posts = posts.concat(posts);
-  posts = posts.concat(posts);
-  posts = posts.concat(posts);
 
   const child = render(posts);
   return <>{child}</>;
