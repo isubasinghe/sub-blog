@@ -13,7 +13,7 @@ const Index = () => {
   const [activeClass, setActiveClass] = useState(pages[0].key);
   return (
     <ComponentContext.Provider value={{ activeClass }}>
-      {typeof window === "undefined" && (
+      {typeof window !== "undefined" && (
         <Layout>
           <ReactFullpage
             licenseKey="506D5FE4-268E4453-AC5FB1BA-ACFA05A5"
