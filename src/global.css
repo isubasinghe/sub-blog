@@ -2,20 +2,6 @@
   font-size: 16px;
 }
 
-.fp-tableCell {
-  background-color: "#232323";
-}
-
-.section {
-  background-color: "#232323";
-}
-body {
-  background-color: "#232323";
-}
-.fullpage-wrapper {
-  background-color: "#232323";
-}
-
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
