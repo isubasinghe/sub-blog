@@ -73,13 +73,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
-    //"gatsby-plugin-sitemap",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://isub.dev",
         sitemap: "https://isub.dev/sitemap.xml",
-        policy: [{ userAgent: "*", disallow: ["/", "*"] }],
+        policy: [{ userAgent: "*", allow: ["/", "*"] }],
       },
     },
     "gatsby-plugin-netlify-cms",
