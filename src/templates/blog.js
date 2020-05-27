@@ -89,8 +89,6 @@ const StyledLink = styled(Link)`
 `;
 
 const Blog = ({ data, pageContext }) => {
-  console.log(data);
-  console.log(pageContext);
   const nextPage = pageContext.nextPagePath;
   const previousPage = pageContext.previousPagePath;
   const nodes = data?.allMarkdownRemark?.nodes ?? [];
