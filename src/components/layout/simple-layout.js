@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../seo";
 import theme from "../../theme";
 
 const Nav = styled.nav`
@@ -47,6 +48,7 @@ const P = styled.p`
 const SimpleLayout = ({ children, footer = null, to = "/#blog" }) => {
   return (
     <>
+      <SEO />
       <BackgroundStyle />
       <Nav>
         <BackContainer to={to}>

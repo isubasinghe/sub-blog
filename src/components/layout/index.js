@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SEO from "../seo";
 import Nav from "../nav";
 
 const Main = styled.main`
@@ -10,6 +11,7 @@ const Main = styled.main`
 const Layout = ({ children }) => {
   return (
     <>
+      <SEO />
       <Nav />
       <Main>{children}</Main>
     </>
