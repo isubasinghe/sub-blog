@@ -1,17 +1,16 @@
+import React from "react";
 import styled from "styled-components";
 import theme from "../../theme";
 
-const Button = styled.button`
+const TextArea = styled.textarea`
   background-color: ${(props) => props.bg || theme.secondary};
   border: 2px solid ${theme.accent};
   color: ${theme.white};
   border-radius: 15px;
   padding-top: ${(props) => props.pt || "15px"};
   padding-bottom: ${(props) => props.pb || "15px"};
-  padding-left: ${(props) => props.pl || "60px"};
-  padding-right: ${(props) => props.pr || "60px"};
-  max-width: ${(props) => props.mw || "100%"};
-  cursor: pointer;
+  padding-left: ${(props) => props.pl || "20px"};
+  padding-right: ${(props) => props.pr || "20px"};
 `;
 
-export default Button;
+export default TextArea;
