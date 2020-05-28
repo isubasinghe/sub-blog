@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Layout from "../components/layout";
+import { ContactForm } from "../components/contact";
 import { pages } from "../helpers/pagedata";
 import ComponentContext from "../context/component";
 
@@ -13,7 +14,7 @@ const Index = () => {
   const [activeClass, setActiveClass] = useState(pages[0].key);
   return (
     <ComponentContext.Provider value={{ activeClass }}>
-      {typeof window !== "undefined" && (
+      {typeof window !== "undefined" ? (
         <Layout>
           <ReactFullpage
             licenseKey="506D5FE4-268E4453-AC5FB1BA-ACFA05A5"
@@ -38,6 +39,8 @@ const Index = () => {
             }}
           />
         </Layout>
+      ) : (
+        <ContactForm hidden={true} />
       )}
     </ComponentContext.Provider>
   );
