@@ -11,8 +11,9 @@ import SimpleLayout from "../components/layout/simple-layout";
 import theme from "../theme";
 
 const Container = styled.div`
-  width: 750px;
+  max-width: 750px;
   margin: 0 auto;
+  padding: 1rem;
 `;
 
 const Footer = styled.footer`
