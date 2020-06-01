@@ -33,14 +33,14 @@ const Icon = styled(FontAwesomeIcon)`
   height: 2rem;
   width: 1.25rem !important;
   path {
-    fill: ${theme.blogText};
+    fill: ${theme.white};
   }
 `;
 
 const P = styled.p`
   margin-left: 1rem;
   font-size: 1.25rem;
-  color: ${theme.blogText};
+  color: ${theme.white};
 `;
 
 const LinkButton = styled(Link)`
@@ -80,7 +80,7 @@ const renderFooter = (prev, next) => {
 };
 
 const StyledLink = styled(Link)`
-  color: ${theme.blogText};
+  color: ${theme.white};
   text-decoration: none;
   &:hover {
     opacity: 0.5;
@@ -104,7 +104,7 @@ const Blog = ({ data, pageContext }) => {
             const { header, lead, path, date } = frontmatter;
             return (
               <StyledLink to={path} id={id}>
-                <hr />
+                <hr className="markdown__render--hr" />
                 <p>{date}</p>
                 <br />
                 <h3>{header}</h3>

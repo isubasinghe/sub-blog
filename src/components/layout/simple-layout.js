@@ -36,14 +36,14 @@ const BackIcon = styled(FontAwesomeIcon)`
   height: 2rem;
   width: 1.25rem !important;
   path {
-    fill: ${theme.blogText};
+    fill: ${theme.white};
   }
 `;
 
 const P = styled.p`
   margin-left: 1rem;
   font-size: 1.25rem;
-  color: ${theme.blogText};
+  color: ${theme.white};
 `;
 const SimpleLayout = ({ children, footer = null, to = "/#blog" }) => {
   return (

@@ -17,18 +17,18 @@ const Container = styled.div`
 
 const H1 = styled.h1`
   font-size: 2rem;
-  color: ${theme.blogText};
+  color: ${theme.white};
 `;
 
 const H2 = styled.h2`
   font-size: 1.5rem;
-  color: ${theme.blogText};
+  color: ${theme.white};
 `;
 
 const P = styled.p`
   font-size: 1rem;
   font-weight: 600;
-  color: ${theme.blogText};
+  color: ${theme.white};
 `;
 
 const MetaContainer = styled.div`
@@ -60,7 +60,7 @@ const Post = ({ data }) => {
         </MetaContainer>
         <Img fluid={gatsbyImg} />
         <H2>{lead}</H2>
-        <hr />
+        <hr className="markdown__render--hr" />
         <div
           className="markdown__render"
           dangerouslySetInnerHTML={{ __html: html }}

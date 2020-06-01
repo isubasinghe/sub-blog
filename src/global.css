@@ -11,12 +11,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 .markdown__render * {
-  color: #c1bdb3;
+  color: #f0f0f0;
   max-width: 750px;
   font-size: 1.2rem;
 }
 
 .markdown__render hr {
+  height: 2px;
+  color: #61ffea;
+  background-color: #61ffea;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.markdown__render--hr {
+  height: 2px;
+  color: #61ffea;
+  background-color: #61ffea;
+  border: none;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
