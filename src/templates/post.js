@@ -85,7 +85,7 @@ export const query = graphql`
         path
         featuredimage {
           childImageSharp {
-            fluid(maxHeight: 200) {
+            fluid(maxHeight: 600, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

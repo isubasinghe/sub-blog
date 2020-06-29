@@ -15,7 +15,7 @@ const PreviewBlogsQuery = ({ render }) => {
             path
             featuredimage {
               childImageSharp {
-                fluid {
+                fluid(maxHeight: 600, quality: 90) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
