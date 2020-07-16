@@ -9,7 +9,7 @@ date: 2020-05-20T07:15:35.366Z
 featuredimage: /img/marc-olivier-jodoin-nqoinj-ttqm-unsplash.jpg
 ---
 Caveat: Node.js has a maximum heap limit (it's quite low from memory) , streaming into a file and then streaming to cloudinary maybe the best option to you.
-
+This may not work for you, cloudinary updated their API and apparently v1 of the API is now broken. I will update this post if I have time (you can raise a PR too!)
 <hr />
 
 To process files from an endpoint in express, I used multer. It accepts multipart/form-data. It has a key value system for text data and it can be configered in different method for files. I was only accepting a single file with it's key being `photo.`
